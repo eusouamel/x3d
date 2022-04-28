@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'></script>
+     <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'/> </link> 
+    
+  </head>
+
+<body>
+  <x3d>
+      <scene>
+
+        <Viewpoint position='0 100 250'></Viewpoint>
+
+      <!--Piso -->
+      <shape>
+          <appearance>
+            <imageTexture url='piso.jpg'/>
+          </appearance>
+          <box size='600 10 400'>
+      </shape>
+
+
+
+ <!-- Parede do lado esquerdo -->
+      <Transform translation='-300 100 0'>
+        <shape>
+          <appearance>
+              <imageTexture url='parede.jpg'/>
+          </appearance>
+          <box size='10 200 400'>
+        </shape>
+      </Transform>
+
+        <!-- Parede do lado direito -->
+      <Transform translation='300 100 0'>
+        <shape>
+          <appearance>
+              <imageTexture url='parede.jpg'/>
+          </appearance>
+          <box size='10 200 400'> <!--segundo altura-->
+        </shape>
+      </Transform>
+
+
+         <!-- Parede do fundo -->
+      <Transform translation='0 100 -200'>
+        <shape>
+          <appearance>
+              <imageTexture url='parede.jpg'/>
+          </appearance>
+          <box size='600 200 10'>
+        </shape>
+      </Transform>
+
+        <!--Porta-->
+      <transform translation='250 100 -195'>
+          <shape>
+            <appearance>
+              <imageTexture url='porta.png'>
+            </appearance>
+            <box size='80 200 2'>
+          </shape>
+        </transform>
+        
+         <!-- Quadro paisagem 1 --> 
+        <transform translation='-220 150 -195'>
+          <shape>
+            <appearance>
+              <imageTexture url='imagemQuadro.jpg'>
+            </appearance>
+            <box size='80 60 2'>
+          </shape>
+        </transform>
+
+        <!-- Quadro paisagem 2--> 
+        <transform translation='50 150 -195'>
+          <shape>
+            <appearance>
+              <imageTexture url='imageQuadro2.jpg'>
+            </appearance>
+            <box size='80 60 2'>
+          </shape>
+        </transform>
+
+         <!-- Balcão base --> 
+        <transform translation='265 10 0'>
+          <shape>
+            <appearance>
+              <imageTexture url='sofa.jpg'/>
+            </appearance>
+            <box size='75 30 220'> 
+          </shape>
+        </transform>
+
+        <!-- Balcão base --> 
+        <transform translation='290 45 0'>
+          <shape>
+            <appearance>
+              <imageTexture url='sofa.jpg'/>
+            </appearance>
+            <box size='20 80 220'> 
+          </shape>
+        </transform>
+
+        <!-- Monitor -->
+            <transform translation="-285 140 50" >
+                <shape>
+                    <appearance>
+                        <material diffuseColor='0 0 0'/>
+                    </appearance>
+                    <box size="3 60 100" />
+                </shape>
+            </transform>
+  
+            <transform translation="-285 110 50" >
+                <shape>
+                    <appearance>
+                        <material diffuseColor='0 0 0' />
+                    </appearance>
+                    <cylinder radius="3" height='20' />
+                </shape>
+            </transform>
+
+        <!-- parte de cima mesa -->
+      
+         <transform translation='0 67 0'>
+           <shape  DEF='Mesa'>
+              <Appearance>
+                <imageTexture url='texturaMesa.jpg'/>
+              </Appearance>
+               <cylinder radius='50' width='100'/>
+              <box size= '100 15 100'></box>
+           </shape>
+         </transform>
+                   <!--pé da mesa-->
+       <transform translation='0 35 0'>
+          <shape DEF='Pe_Mesa'>
+            <appearance>
+              <imageTexture url='peDaMesa.jpg'/>
+            </appearance>
+            <cylinder radius='5' height='62'/>
+          </shape>
+        </transform>
+
+        <!--tapete-->
+        <transform translation='0 5 0'>
+        <shape>
+          <appearance>
+            <imageTexture url='tapete.jpg'/>
+          </appearance>
+          <box size='300 5 200'>
+      </shape>    
+          </transform>
+  
+         
+
+        
+ </x3d>
+</body>
+
+</html>
